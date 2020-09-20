@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>distributor Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ distributor.name }}</span>
+        <p>Place: {{ distributor.place }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'distributors_update' distributor.id %}">Edit</a>
+        <a href="{% url 'distributors_delete' distributor.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

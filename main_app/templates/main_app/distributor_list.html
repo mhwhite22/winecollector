@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Distributor List</h1>
+
+{% for distributor in distributor_list %}
+  <a href="{% url 'distributors_detail' distributor.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ distributor.name }}</span>
+            <p>Place: {{ distributor.place }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
