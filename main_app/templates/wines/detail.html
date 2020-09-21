@@ -42,14 +42,13 @@
 <hr>
 <div class="row">
   <div class="col s6">
-    <h3>{{ wine.name }}'s Distributor</h3>
+    <h3>Distributor</h3>
     {% if wine.distributor.count %}
       {% for distributor in wine.distributor.all %}
         <div class="card">
           <div class="card-content">
             <span class="card-title">
-              A <span style="name: {{ distributor.name }}">{{ distributor.place }}</span> {{ distributor.name }}
-            </span>
+            {{ distributor.name }}
           </div>
         </div>
       {% endfor %}
@@ -59,7 +58,7 @@
   </div>
   <div class="col s6">
     <h3>Available Distributors</h3>
-    {% if distributors.count %}
+    {% if distributor.count %}
       {% for distributor in distributor.all %}
         <div class="card">
           <div class="card-content">

@@ -46,7 +46,7 @@ def add_tasting(request, wine_id):
     return redirect('detail', wine_id=wine_id)
 
 def assoc_distributor(request, wine_id, distributor_id):
-    Wine.objects.get(id=wine_id).distributors.add(distributor_id)
+    Wine.objects.get(id=wine_id).distributor.add(distributor_id)
     return redirect('detail', wine_id=wine_id)
 
 class DistributorList(ListView):
